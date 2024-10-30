@@ -20,15 +20,14 @@ permissions:
 # A workflow run is made up of one or more jobs 
 # that can run sequentially or in parallel
 
-jobs:
-   
-  build:
-  
+jobs:   
+  build:  
     runs-on: ubuntu-latest
     
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
      
       - name: Azure login
         uses: azure/login@v2
